@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Budget">
+  <rect width="800" height="450" fill="#EDE9FE" rx="24"/>
+  <rect x="100" y="80" width="600" height="240" rx="20" fill="#fff" stroke="#8B5CF6" stroke-width="4"/>
+  <rect x="140" y="120" width="200" height="32" rx="8" fill="#A78BFA"/>
+  <rect x="140" y="170" width="320" height="32" rx="8" fill="#C4B5FD"/>
+  <rect x="140" y="220" width="160" height="32" rx="8" fill="#DDD6FE"/>
+  <text x="400" y="380" text-anchor="middle" font-family="Nunito,sans-serif" font-size="28" fill="#5B21B6" font-weight="700">N465B =Ê</text>
+</svg>
