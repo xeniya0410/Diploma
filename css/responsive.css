@@ -1,0 +1,260 @@
+/* Мобильная адаптация и защита от горизонтальной прокрутки */
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.container {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Шапка: два ряда на узком экране */
+@media (max-width: 900px) {
+  :root {
+    --topbar-height: 120px;
+  }
+
+  .topbar,
+  .topbar-landing,
+  .topbar-admin.admin-topbar {
+    height: auto;
+    min-height: 56px;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 8px;
+    row-gap: 8px;
+  }
+
+  .topbar-left {
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: 8px;
+  }
+
+  .topbar .top-right,
+  .topbar-landing .top-right,
+  .topbar-admin .top-right {
+    flex: 1 1 100%;
+    width: 100%;
+    min-width: 0;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 6px;
+    max-width: 100%;
+  }
+
+  .logo {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .menu-btn {
+    font-size: 22px;
+    padding: 4px;
+    flex-shrink: 0;
+  }
+
+  .btn-login,
+  .btn-register {
+    padding: 7px 12px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .lang-switcher {
+    margin-right: 0;
+    flex-shrink: 0;
+  }
+
+  .topbar-user {
+    max-width: 88px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
+  .xp-pill {
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+
+  .app-main {
+    padding-top: calc(var(--topbar-height) + 12px);
+  }
+
+  /* Админ-шапка: языки и «Выйти» — отдельная строка, без обрезания */
+  body.admin-body {
+    --topbar-height: 112px;
+  }
+
+  .topbar-admin.admin-topbar {
+    height: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .topbar-admin .topbar-left {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: calc(100% - 48px);
+  }
+
+  .topbar-admin .admin-logo {
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .topbar-admin .top-right {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .topbar-admin .admin-logout {
+    padding: 6px 12px;
+    font-size: 12px;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  /* Админка: таблицы не раздувают всю страницу */
+  .admin-body .app-main {
+    min-width: 0;
+    max-width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+  }
+
+  .admin-body .container.admin-page,
+  .admin-body .container.panel-page.admin-page {
+    min-width: 0;
+    max-width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+  }
+
+  .admin-body .admin-page > .app-card,
+  .admin-body .acard,
+  .admin-body .admin-tabs-wrap {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .admin-body .tickets-table-wrap {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* В шапке дублируют пункты бокового меню — убираем на узком экране */
+@media (max-width: 640px) {
+  .topbar .topbar-nav-secondary {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --topbar-height: 132px;
+  }
+
+  body.admin-body {
+    --topbar-height: 104px;
+  }
+
+  .topbar-admin .admin-logo {
+    font-size: 14px;
+  }
+
+  .topbar-admin .admin-logout {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+
+  .topbar .topbar-user {
+    display: none;
+  }
+
+  .btn-login,
+  .btn-register {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .lang-switcher__btn {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+
+  .hero-finya__title {
+    font-size: 26px;
+  }
+
+  .hero-finya {
+    padding-left: 16px;
+    padding-right: 16px;
+    min-height: auto;
+  }
+
+  .hero-finya__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-finya__buttons .hero-main-btn,
+  .hero-finya__buttons .hero-second-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .page-title {
+    font-size: 22px;
+  }
+}
+
+/* Лендинг */
+@media (max-width: 768px) {
+  .landing-page .hero-finya {
+    padding-top: calc(var(--topbar-height) + 16px);
+  }
+
+  .guest-courses__title,
+  .landing-about__title {
+    font-size: 24px;
+  }
+
+  .trial-card {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .faq-section .faq-title {
+    font-size: 22px;
+  }
+
+  .faq-section .faq-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .benefits-section {
+    padding: 48px 16px;
+  }
+}

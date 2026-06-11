@@ -1,0 +1,7 @@
+/includes/config.local.php
+/certificates/*.pdf
+/storage/logs/*
+!.gitkeep
+/vendor/
+.DS_Store
+Thumbs.db

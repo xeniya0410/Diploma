@@ -1,0 +1,11 @@
+.page-test-guard,
+.page-test-guard .test-guard-zone,
+.page-test-guard .quiz-form {
+  -webkit-user-select: none;
+  user-select: none;
+}
+.page-test-guard .quiz-q-text,
+.page-test-guard .quiz-option span {
+  -webkit-user-select: none;
+  user-select: none;
+}

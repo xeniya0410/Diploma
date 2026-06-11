@@ -1,0 +1,51 @@
+.trial-section {
+  padding: 48px 0 64px;
+  background: linear-gradient(180deg, #f0f9ff 0%, #fff 100%);
+}
+
+.trial-card {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.trial-text {
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.trial-option {
+  display: block;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.trial-result {
+  margin-top: 12px;
+  font-weight: 700;
+}
+
+.trial-illus-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  overflow: visible;
+}
+
+.trial-card {
+  overflow: visible;
+  /* перебить overflow: hidden, если добавляли */
+}
+
+.trial-card .trial-illus {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  /* размер внутри карточки */
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  flex-shrink: 1;
+  /* не 0 */
+  border-radius: 12px;
+}

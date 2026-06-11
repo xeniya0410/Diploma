@@ -1,0 +1,30 @@
+.lang-switcher {
+  display: inline-flex;
+  gap: 4px;
+  margin-right: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+  padding: 3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.lang-switcher__btn {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 800;
+  border-radius: 999px;
+  color: var(--text-muted, #64748b);
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+}
+.lang-switcher__btn.is-active {
+  background: var(--primary, #0ea5e9);
+  color: #fff;
+}
+.topbar-landing .lang-switcher,
+.topbar .lang-switcher {
+  flex-shrink: 0;
+}

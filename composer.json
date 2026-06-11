@@ -1,0 +1,13 @@
+{
+  "name": "finkid/platform",
+  "description": "ФинКид — платформа финансовой грамотности для детей",
+  "type": "project",
+  "require": {
+    "php": ">=7.4",
+    "phpmailer/phpmailer": "^6.9",
+    "dompdf/dompdf": "3.0"
+  },
+  "config": {
+    "optimize-autoloader": true
+  }
+}

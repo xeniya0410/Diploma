@@ -1,0 +1,5 @@
+# UniServer / Apache — показать ошибки PHP (только для разработки)
+php_flag display_errors On
+php_value error_reporting 32767
+
+DirectoryIndex index.php

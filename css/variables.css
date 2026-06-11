@@ -1,0 +1,20 @@
+:root {
+  --color-primary: #2d7dd2;
+  --color-primary-dark: #1a5ea8;
+  --color-accent: #0ab5a6;
+  --color-accent-warm: #f4a261;
+  --color-bg: #f0f7ff;
+  --color-surface: #ffffff;
+  --color-text: #1e2a3a;
+  --color-muted: #6b82a8;
+  --color-success: #2ecc71;
+  --color-error: #e74c3c;
+  --font-main: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Fredoka One', 'Nunito', system-ui, sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --shadow: 0 4px 20px rgba(45, 125, 210, 0.12);
+  --sidebar-width: 280px;
+  --topbar-height: 64px;
+}

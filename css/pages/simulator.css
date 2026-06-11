@@ -1,0 +1,101 @@
+/* Симулятор «Моя жизнь» */
+
+.simulator-page .sim-stats {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.sim-label {
+  color: var(--text-muted, #64748b);
+  font-size: 14px;
+}
+
+.sim-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.sim-choice-btn {
+  width: 100%;
+  text-align: left;
+}
+
+.sim-result {
+  margin-top: 16px;
+  padding: 12px;
+  background: #ecfdf5;
+  border-radius: 12px;
+  color: #065f46;
+}
+
+/* Блок персонажа Фини */
+.simulator-page .sim-finya {
+  background: linear-gradient(160deg, #eff6ff, #dbeafe);
+  border: 2px solid #bfdbfe;
+  border-radius: 20px;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.simulator-page .sim-finya__row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.simulator-page .sim-finya__avatar {
+  flex-shrink: 0;
+  width: 72px;
+  line-height: 0;
+}
+
+.simulator-page .sim-finya__avatar .fsvg {
+  display: block;
+  width: 100%;
+  height: auto;
+  animation: sim-finya-float 2.5s ease-in-out infinite;
+}
+
+@keyframes sim-finya-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.simulator-page .sim-finya__bubble {
+  flex: 1;
+  min-width: 0;
+  background: #fff;
+  border: 2px solid #bfdbfe;
+  border-radius: 13px 13px 13px 4px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #334155;
+  line-height: 1.45;
+  box-shadow: 0 2px 10px rgba(45, 125, 210, 0.08);
+}
+
+@media (max-width: 480px) {
+  .simulator-page .sim-finya__row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .simulator-page .sim-finya__bubble {
+    border-radius: 13px;
+    width: 100%;
+  }
+}
